@@ -13,6 +13,8 @@ batch_test = batch_Norm(inputx.transpose(-1,-2)).transpose(-1,-2);
 print(batch_test);
 
 #手写BatchNormalization，代码可以看到求均值与方差是对一整个batch
+#在NLP中,BN是对每个Batch中的所有seq_len中的每个特征做BN
+#在图像中，BN是对每个Batch中的channel做BN
 batch_mean = torch.mean(inputx, dim=(0, 1), keepdim=True);
 batch_std = torch.std(inputx, dim=(0, 1), unbiased=False, keepdim=True);
 verify_batch = (inputx - batch_mean)/(batch_std+1e-05); #相比官方文档不同，小有误差，可能会影响小数点后五位后
