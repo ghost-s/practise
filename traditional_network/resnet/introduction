@@ -1,0 +1,3 @@
+超深的网络结构
+提出residual模块
+使用BN加速训练(丢弃dropout)
