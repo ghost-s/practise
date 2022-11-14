@@ -1,0 +1,6 @@
+v1:
+提出了channel shuffle思想
+大量使用group convolution以及DW卷积
+v2:
+提出四条高效的网络设计准则
+提出新的block设计
